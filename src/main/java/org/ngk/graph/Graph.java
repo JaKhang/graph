@@ -1,5 +1,7 @@
 package org.ngk.graph;
 
+import java.util.List;
+import java.util.Set;
 import java.util.function.Consumer;
 
 public interface Graph<T>{
@@ -16,7 +18,6 @@ public interface Graph<T>{
     boolean isMultipleGraph();
 
 
-
     boolean isDirected();
 
     int numberOfEdges();
@@ -31,4 +32,7 @@ public interface Graph<T>{
 
     boolean containEdge(T src,T dest);
 
+    boolean setData(int index, T data);
+
+    Set<T> getAdjSet(T v);
 }

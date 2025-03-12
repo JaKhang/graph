@@ -78,6 +78,14 @@ public abstract class AdjListGraph<T> implements Graph<T> {
         return adjList().values().stream().allMatch(ts -> ts.stream().distinct().count() == ts.size());
     }
 
+    @Override
+    public boolean setData(int index, T data) {
+        return false;
+    }
 
-
+    @Override
+    public Set<T> getAdjSet(T v) {
+        // TODO (PC, 12/03/2025): To change the body of an implemented method
+        return Set.of();
+    }
 }
